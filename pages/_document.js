@@ -8,7 +8,6 @@ injectGlobal`
 
   body {
     background-color: darkslategray;
-    min-height: 100vh;
     margin: 0;
   }
 
