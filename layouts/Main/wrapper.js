@@ -6,35 +6,13 @@ const Wrapper = styled.div`
   grid-template-columns: 100%;
 
   main {
-    min-height: 95vh;
+    min-height: 94vh;
     grid-row: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-
-  footer {
-    min-height: 4vh;
-    grid-row: 2;
-    display: flex;
-    border-radius: 10px;
-    background: magenta;
-    align-items: center;
-  }
-
-  footer a {
-    margin-left: auto;
-    margin-right: 4px;
-    margin-top: 1ch;
-    color: yellow;
-    text-decoration: none;
-    padding: 0 2vh 1vh;
-  }
-
-  footer img {
-    padding: 0.3vh 0 0 1vh;
-  } 
 `
 
 export default Wrapper

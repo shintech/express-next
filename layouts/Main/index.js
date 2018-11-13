@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { withRouter } from 'next/router'
 import PropTypes from 'prop-types'
+import Footer from '../../components/Footer'
 import Wrapper from './wrapper'
 
 const Main = ({ children, title = 'Hello World!' }) =>
@@ -14,10 +15,7 @@ const Main = ({ children, title = 'Hello World!' }) =>
       { children }
     </main>
 
-    <footer>
-      <img src='/static/images/react.svg' width='25px' height='25px' />
-      <a href='#'>&#169;&nbsp;shintech.ninja</a>
-    </footer>
+    <Footer message='shintech.ninja' />
   </Wrapper>
 
 Main.propTypes = {
