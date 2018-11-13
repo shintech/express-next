@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Wrapper = styled.footer`
   min-height: 4vh;
-  grid-row: 2;
+  grid-row: 3;
   display: flex;
   border-radius: 10px;
   background: magenta;

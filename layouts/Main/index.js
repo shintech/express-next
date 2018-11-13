@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { withRouter } from 'next/router'
 import PropTypes from 'prop-types'
+import Nav from '../../components/Nav'
 import Footer from '../../components/Footer'
 import Wrapper from './wrapper'
 
@@ -10,6 +11,8 @@ const Main = ({ children, title = 'Hello World!' }) =>
       <title>{ title } | HOME</title>
       <link rel='icon' type='image/png' href='/static/images/favicon.png' />
     </Head>
+
+    <Nav />
 
     <main>
       { children }
