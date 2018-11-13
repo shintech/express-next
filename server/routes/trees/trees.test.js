@@ -11,7 +11,7 @@ describe('SERVER -> GET /api/posts -> api.fetch()..', () => {
     res = await request(_server).get('/api/trees')
   })
 
-  it('expect response body to have property value...', async () => {
+  it('expect response body to have property "value"...', async () => {
     expect(res.body).toHaveProperty('value')
   })
 
@@ -19,7 +19,7 @@ describe('SERVER -> GET /api/posts -> api.fetch()..', () => {
     expect(res.body.value).toEqual(0)
   })
 
-  it('expect response body to have property message...', async () => {
+  it('expect response body to have property "message"...', async () => {
     expect(res.body).toHaveProperty('message')
   })
 

@@ -11,14 +11,13 @@ const dev = process.env['NODE_ENV'] !== 'production'
 const app = nextjs({ dev })
 const handle = app.getRequestHandler()
 
-const config = { port, environment }
-const logger = createLogger(config)
-const server = createServer({ ...config, logger })
-
 app.prepare()
   .then(() => {
-    server.use('/api', router)
+    const config = { port, environment }
+    const logger = createLogger(config)
+    const server = createServer({ ...config, logger })
 
+    server.use('/api', router)
     server.use((req, res) => handle(req, res))
 
     server.listen(port, () => {

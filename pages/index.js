@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import actions from '../redux/actions/trees'
 import api from '../api/trees'
 import Main from '../layouts/Main'
@@ -23,6 +24,13 @@ Home.getInitialProps = async ({ store }) => {
   }
 
   return { title }
+}
+
+Home.propTypes = {
+  title: PropTypes.string.isRequired,
+  trees: PropTypes.object.isRequired,
+  increment: PropTypes.func.isRequired,
+  decrement: PropTypes.func.isRequired
 }
 
 function mapStateToProps (state) {

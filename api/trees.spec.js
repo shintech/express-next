@@ -16,11 +16,19 @@ describe('API -> TREES -> api.getTrees()...', () => {
     json = await api.fetch()
   })
 
-  it('expect trees to have property "value...', () => {
+  it('expect trees to have property "value"...', () => {
     expect(json).toHaveProperty('value')
   })
 
   it('expect trees.value to equal mock.value...', () => {
     expect(json.value).toEqual(_treesMock.value)
+  })
+
+  it('expect trees to have property "message"...', () => {
+    expect(json).toHaveProperty('value')
+  })
+
+  it('expect trees.message to equal mock.message...', () => {
+    expect(json.message).toEqual(_treesMock.message)
   })
 })

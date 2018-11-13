@@ -30,11 +30,7 @@
     "navigator": false,
     "window": false,
     "React": true,
-    "_postsMock": true,
-    "_devicesMock": true,
-    "_usersMock": true,
-    "_loginResponse": true,
-    "_url": true,
+    "_treesMock": true,
     "_server": true
   },
   
