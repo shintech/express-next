@@ -25,14 +25,11 @@ const Wrapper = styled.div`
 
   footer a {
     margin-left: auto;
+    margin-right: 4px;
+    margin-top: 1ch;
     color: yellow;
     text-decoration: none;
     padding: 0 2vh 1vh;
-  }
-
-  footer a {
-    margin-right: 4px;
-    margin-top: 1ch;
   }
 
   footer img {
