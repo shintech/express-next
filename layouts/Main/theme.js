@@ -1,3 +1,3 @@
 export default (options = {}) => ({
-  height: '87vh'
+  height: '89.75vh'
 })

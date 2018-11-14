@@ -1,17 +1,21 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.nav`
-  display: flex;
   grid-row: 1;
-  background-color: ${props => props.theme.background};
-  border-radius: 1ch;
-  overflow: hidden;
+
+  display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+
+  background-color: ${props => props.theme.background};
+  border-radius: 1ch;
 
   a {
-    padding: 1.25ch;
     color: ${props => props.theme.text};
+    line-height: 4.5ch;
+    text-align: center;
+    padding: 1ch 2ch 1ch 2ch;
     text-decoration: none;
     font-size: 2ch;
 
