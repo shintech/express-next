@@ -7,7 +7,7 @@ import Clicker from '../components/Clicker'
 import Title from '../components/Title'
 
 const Home = ({ title, trees, increment, decrement }) =>
-  <Main>
+  <Main title='index' host='shintech.ninja' favicon='/static/images/favicon.png' >
     <Title title={title} />
     <Clicker trees={trees} increment={increment} decrement={decrement} />
   </Main>

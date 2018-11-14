@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types'
 import Wrapper from './wrapper'
+import theme from './theme'
 
-const Title = ({ title }) =>
-  <Wrapper>
+const Title = ({ title = 'Hello World!' }) =>
+  <Wrapper theme={theme()}>
     <h1>{ title }</h1>
   </Wrapper>
 

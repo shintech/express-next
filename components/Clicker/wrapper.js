@@ -2,52 +2,44 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   p {
-    color: violet;
+    color: ${props => props.theme.text};
     font-size: 6ch;
     margin: 0.75ch;
     white-space: nowrap;
-    text-align: center;          
-  }
-
-  .positive {
-    color: palegreen;
-  }
-  
-  .negative {
-    color: lightcoral;
+    text-align: center;
+    
+    span {
+      color: ${props => props.theme.number};
+    }    
   }
   
-  .zero {
-    color: deepskyblue;
-  }
-
   button {
     border-radius: 2ch;
     height: 10ch;
     width: 23ch;
     font-size: 2.5ch;
     margin: 0.25ch;
-    border: 0.1ch solid white;
+    border: ${props => props.theme.button.border};
   }
 
   button.decrement {
-    background-color: pink;
+    background-color: ${props => props.theme.decrement};
   }
 
   button.increment {
-    background-color: mediumspringgreen;
+    background-color: ${props => props.theme.increment};
   }
 
   button:hover {
     cursor: pointer;
-    background-color: gold;
-    color: midnightblue;
-    border: 0.2ch solid white;
+    background-color: ${props => props.theme.button.hover};
+    color:  ${props => props.theme.button.hoverText};
+    border: ${props => props.theme.button.activeBorder};
   }
 
   button:active {
-    background-color: teal;
-    color: white;
+    background-color:  ${props => props.theme.button.active};
+    color:  ${props => props.theme.button.activeText};
   }
 `
 

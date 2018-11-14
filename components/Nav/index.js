@@ -1,17 +1,17 @@
 import Link from 'next/link'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import Wrapper from './wrapper'
+import theme from './theme'
 
-const Title = ({ title }) =>
-  <Wrapper>
-    <Link prefetch href='/'><a>home</a></Link>
+const Nav = () =>
+  <Wrapper theme={theme()}>
+    <Link prefetch href='javascript:void(0);'><a>home</a></Link>
+
     <a href='javascript:void(0);' className='icon' onClick={() => { }}>
       <i className='fa fa-bars' />
     </a>
   </Wrapper>
 
-Title.propTypes = {
-  title: PropTypes.string.isRequired
-}
+Nav.propTypes = {}
 
-export default Title
+export default Nav

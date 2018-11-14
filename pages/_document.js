@@ -4,8 +4,6 @@ import Document, { Head, Main, NextScript } from 'next/document'
 import { injectGlobal, ServerStyleSheet } from 'styled-components'
 
 injectGlobal`
-  @import 'https://fonts.googleapis.com/css?family=Esteban|Farsan|Rouge+Script';
-
   body {
     background-color: darkslategray;
     margin: 0;

@@ -4,12 +4,13 @@ import PropTypes from 'prop-types'
 import Nav from '../../components/Nav'
 import Footer from '../../components/Footer'
 import Wrapper from './wrapper'
+import theme from './theme'
 
-const Main = ({ children, title = 'Hello World!' }) =>
-  <Wrapper>
+const Main = ({ children, title = 'default!', host = 'localhost', favicon = '/static/images/favicon.png' }) =>
+  <Wrapper theme={theme()}>
     <Head>
-      <title>{ title } | HOME</title>
-      <link rel='icon' type='image/png' href='/static/images/favicon.png' />
+      <title>{ title } | {host} </title>
+      <link rel='icon' type='image/png' href={favicon} />
     </Head>
 
     <Nav />
@@ -18,12 +19,13 @@ const Main = ({ children, title = 'Hello World!' }) =>
       { children }
     </main>
 
-    <Footer message='shintech.ninja' />
+    <Footer message={host} />
   </Wrapper>
 
 Main.propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  host: PropTypes.string.isRequired,
   router: PropTypes.object.isRequired
 }
 

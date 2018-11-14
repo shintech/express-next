@@ -6,12 +6,17 @@ const Wrapper = styled.div`
   grid-template-columns: 100%;
 
   main {
-    min-height: 92vh;
+    min-height: ${props => props.theme.height};
+
     grid-row: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  @media (max-width: 800px) {
+    background-color: midnightblue;
   }
 `
 

@@ -1,32 +1,28 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.nav`
-  grid-row: 1;
-  min-height: 4vh;
-  background-color: purple;
-  border-radius: 0 0 1ch 1ch;
-  overflow: hidden;
-  margin: 0;
   display: flex;
+  grid-row: 1;
+  background-color: ${props => props.theme.background};
+  border-radius: 1ch;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
 
   a {
-    line-height: 4.5ch;
-    text-align: center;
-    padding-left: 2ch;
-    padding-right: 2ch;
-    color: #FFF;
+    padding: 1.25ch;
+    color: ${props => props.theme.text};
     text-decoration: none;
     font-size: 2ch;
-    
+
     :hover {
-      background-color: violet;
-      color: black
+      background-color: ${props => props.theme.hover};
+      color: ${props => props.theme.hoverText};
     }
   }
 
   a.icon {
    margin-left: auto;
-   display: block;
   }
 `
 

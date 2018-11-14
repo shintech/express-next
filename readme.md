@@ -18,4 +18,5 @@
     
 ### TODO
 
-- [ ] navbar
+- [x] navbar
+- [ ] write tests for theme code
