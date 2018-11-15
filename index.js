@@ -1,9 +1,15 @@
 const nextjs = require('next')
+const path = require('path')
 const nextRoutes = require('./routes')
 const router = require('./server/router')
 const createServer = require('./server')
 const createLogger = require('shintech-logger')
 const pkg = require('./package.json')
+
+require('dotenv').config({
+  path: path.join(__dirname, 'config', 'env', 'development.env'),
+  systemvars: true
+})
 
 const port = parseInt(process.env['PORT']) || 8000
 const environment = process.env['NODE_ENV'] || 'development'
@@ -23,6 +29,7 @@ app.prepare()
 
       .listen(port)
       .on('listening', () => {
+        logger.info(`loading environment -> ${process.env['NODE_ENV']}...`)
         logger.info(`${pkg.name} - version: ${pkg.version} - listening on port ${port}...`)
       })
 

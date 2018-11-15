@@ -4,7 +4,7 @@ const compression = require('compression')
 
 const Router = require('./router')
 
-module.exports = ({ logger, port, environment }) => {
+module.exports = ({ logger }) => {
   const server = express()
 
   const api = Router({ })

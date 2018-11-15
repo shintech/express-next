@@ -1,14 +1,10 @@
 import { connect } from 'react-redux'
-import getConfig from 'next/config'
 import PropTypes from 'prop-types'
 import actions from '../redux/actions/trees'
 import api from '../api/trees'
 import Main from '../layouts/Main'
 import Clicker from '../components/Clicker'
 import Title from '../components/Title'
-
-const { publicRuntimeConfig } = getConfig()
-const baseURL = publicRuntimeConfig['BASE_URL']
 
 const Home = ({ title, trees, increment, decrement }) =>
   <Main title='index' host='shintech.ninja' favicon='/static/images/nodejs-icon.svg'>
@@ -18,7 +14,7 @@ const Home = ({ title, trees, increment, decrement }) =>
 
 Home.getInitialProps = async ({ store }) => {
   try {
-    let json = await api.fetch(baseURL)
+    let json = await api.fetch()
 
     store.dispatch(actions.fetchValue(json.value))
   } catch (err) {

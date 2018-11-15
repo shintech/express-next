@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-fetch'
 
 export default {
-  fetch: function (baseURL) {
+  fetch: function () {
     const options = {
       method: 'GET',
       headers: {
@@ -9,6 +9,6 @@ export default {
       }
     }
 
-    return fetch(`${baseURL}/api/trees`, options).then(response => response.json())
+    return fetch(`${process.env['BASE_URL']}/api/trees`, options).then(response => response.json())
   }
 }

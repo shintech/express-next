@@ -5,11 +5,14 @@ import path from 'path'
 
 configure({ adapter: new Adapter() })
 
-global.process.env = {
-  NODE_ENV: 'test'
-}
-
 const environment = 'test'
+
+global.process.env = {
+  NODE_ENV: environment,
+  BASE_URL: 'http://localhost:8000',
+  PORT: 8000,
+  HOST: 'localhost'
+}
 
 const logger = require('shintech-logger')({ environment })
 

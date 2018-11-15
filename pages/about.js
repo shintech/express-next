@@ -1,14 +1,10 @@
 import { connect } from 'react-redux'
-import getConfig from 'next/config'
 import PropTypes from 'prop-types'
 import Main from '../layouts/Main'
 import Title from '../components/Title'
 import Content from '../components/Content'
 import actions from '../redux/actions/about'
 import api from '../api/about'
-
-const { publicRuntimeConfig } = getConfig()
-const baseURL = publicRuntimeConfig['BASE_URL']
 
 const About = ({ about }) =>
   <Main title='about' host='shintech.ninja' favicon='/static/images/react.svg' >
@@ -18,7 +14,7 @@ const About = ({ about }) =>
 
 About.getInitialProps = async ({ store }) => {
   try {
-    let json = await api.fetch(baseURL)
+    let json = await api.fetch()
 
     store.dispatch(actions.fetch(json))
   } catch (err) {
