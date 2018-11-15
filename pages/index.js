@@ -6,15 +6,13 @@ import Main from '../layouts/Main'
 import Clicker from '../components/Clicker'
 import Title from '../components/Title'
 
-const Home = ({ title, trees, increment, decrement }) =>
-  <Main title='index' host='shintech.ninja' favicon='/static/images/favicon.png' >
+const Home = ({ title = 'Hello World!!', trees, increment, decrement }) =>
+  <Main title='index' host='shintech.ninja' favicon='/static/images/react.svg' >
     <Title title={title} />
     <Clicker trees={trees} increment={increment} decrement={decrement} />
   </Main>
 
 Home.getInitialProps = async ({ store }) => {
-  const title = 'Hello World!'
-
   try {
     let json = await api.fetch()
 
@@ -23,7 +21,7 @@ Home.getInitialProps = async ({ store }) => {
     console.error(err.message)
   }
 
-  return { title }
+  return {}
 }
 
 Home.propTypes = {

@@ -19,7 +19,9 @@ const Wrapper = styled.footer`
   }
 
   img {
-    padding: 0.4vh 0 0 1vh;
+    margin: 0.5vh 0 0 1vh;
+    height: 5ch;
+    width: 5ch;
   }
 
   .footer-message {

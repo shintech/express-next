@@ -10,7 +10,7 @@ const Wrapper = styled.nav`
 
   background-color: ${props => props.theme.background};
   border-radius: 1ch;
-
+  
   a {
     color: ${props => props.theme.text};
     line-height: 4.5ch;
@@ -28,6 +28,17 @@ const Wrapper = styled.nav`
   a.icon {
    margin-left: auto;
   }
+  
+  .active {
+    background-color: ${props => props.theme.active};
+    color: ${props => props.theme.activeHoverText};
+    
+    :hover {
+      background-color: ${props => props.theme.activeHover};
+      cursor: default;
+      color: ${props => props.theme.activeHoverText}
+    }  
+  }  
 `
 
 export default Wrapper
