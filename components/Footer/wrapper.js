@@ -18,7 +18,7 @@ const Wrapper = styled.footer`
     text-decoration: none;
   }
 
-  img {
+  svg {
     margin: 0.5vh 0 0 1vh;
     height: 5ch;
     width: 5ch;
