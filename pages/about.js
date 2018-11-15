@@ -3,12 +3,14 @@ import PropTypes from 'prop-types'
 import Main from '../layouts/Main'
 import Title from '../components/Title'
 
-const About = ({ title = 'About!!' }) =>
-  <Main title='about' host='shintech.ninja' favicon='/static/images/nodejs-icon.svg' >
+const About = ({ title }) =>
+  <Main title='about' host='shintech.ninja' favicon='/static/images/react.svg' >
     <Title title={title} />
   </Main>
 
-About.getInitialProps = async () => ({})
+About.getInitialProps = async () => ({
+  title: 'About!!'
+})
 
 About.propTypes = {
   title: PropTypes.string.isRequired

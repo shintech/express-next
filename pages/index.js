@@ -6,8 +6,8 @@ import Main from '../layouts/Main'
 import Clicker from '../components/Clicker'
 import Title from '../components/Title'
 
-const Home = ({ title = 'Hello World!!', trees, increment, decrement }) =>
-  <Main title='index' host='shintech.ninja' favicon='/static/images/react.svg' >
+const Home = ({ title, trees, increment, decrement }) =>
+  <Main title='index' host='shintech.ninja' favicon='/static/images/nodejs-icon.svg'>
     <Title title={title} />
     <Clicker trees={trees} increment={increment} decrement={decrement} />
   </Main>
@@ -21,7 +21,9 @@ Home.getInitialProps = async ({ store }) => {
     console.error(err.message)
   }
 
-  return {}
+  return {
+    title: 'Hello World!!'
+  }
 }
 
 Home.propTypes = {
