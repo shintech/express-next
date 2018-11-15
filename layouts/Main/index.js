@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { withRouter } from 'next/router'
 import PropTypes from 'prop-types'
 import Nav from '../../components/Nav'
 import Footer from '../../components/Footer'
@@ -26,7 +25,7 @@ Main.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
   host: PropTypes.string.isRequired,
-  router: PropTypes.object.isRequired
+  favicon: PropTypes.string
 }
 
-export default withRouter(Main)
+export default Main

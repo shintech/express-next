@@ -9,6 +9,6 @@ export default {
       }
     }
 
-    return fetch(`${baseURL}/api/trees`, options).then(response => response.json())
+    return fetch(`${baseURL}/api/about`, options).then(response => response.json())
   }
 }

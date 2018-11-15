@@ -13,7 +13,7 @@ describe('API -> TREES -> api.getTrees()...', () => {
   let json
 
   beforeAll(async () => {
-    json = await api.fetch()
+    json = await api.fetch('http://localhost:8000')
   })
 
   it('expect trees to have property "value"...', () => {

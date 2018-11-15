@@ -1,6 +1,7 @@
 const express = require('express')
 
 const trees = require('./routes/trees')
+const about = require('./routes/about')
 
 const router = express.Router()
 
@@ -13,6 +14,9 @@ module.exports = function (options) {
 
   router.route('/trees')
     .get(trees.fetch)
+
+  router.route('/about')
+    .get(about.fetch)
 
   return router
 }

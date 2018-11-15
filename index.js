@@ -16,19 +16,19 @@ app.prepare()
   .then(() => {
     const config = { port, environment }
     const logger = createLogger(config)
-    
+
     createServer({ ...config, logger })
       .use('/api', router)
       .use((req, res) => handle(req, res))
-  
+
       .listen(port)
-        .on('listening', () => {
-          logger.info(`${pkg.name} - version: ${pkg.version} - listening on port ${port}...`)
-        })
-        
-        .on('error', (err) => {
-          logger.error(err.message)
-          
-          throw new Error(err)
-        })
+      .on('listening', () => {
+        logger.info(`${pkg.name} - version: ${pkg.version} - listening on port ${port}...`)
+      })
+
+      .on('error', (err) => {
+        logger.error(err.message)
+
+        throw new Error(err)
+      })
   })
