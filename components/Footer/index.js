@@ -4,7 +4,7 @@ import theme from './theme'
 
 const Footer = ({ message = 'localhost' }) =>
   <Wrapper theme={theme()}>
-    <img src='/static/images/nextjs.svg' width='60px' height='60vh' />
+    <img src='/static/images/nextjs.svg' width='60px' height='60px' />
     <a href='#'>&#169;&nbsp;<span className='footer-message'>{ message }</span></a>
   </Wrapper>
 
