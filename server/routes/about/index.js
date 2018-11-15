@@ -1,15 +1,9 @@
 const faker = require('faker')
 
-const format = function (json) {
-  const { title, data } = json
-
-  let newTitle = `${title.charAt(0).toUpperCase()}${title.slice(1)}!!`
-
-  return {
-    title: newTitle,
-    data
-  }
-}
+const format = ({ title, data }) => ({
+  title: `${title.charAt(0).toUpperCase()}${title.slice(1)}!!`,
+  data
+})
 
 module.exports = {
   fetch: (req, res) => {
