@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import api from './about'
+import api from 'api/about'
 import nock from 'nock'
 
 console.log = jest.fn()

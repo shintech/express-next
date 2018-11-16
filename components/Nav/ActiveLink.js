@@ -1,6 +1,6 @@
 import { withRouter } from 'next/router'
 import React, { Children } from 'react'
-import routes, { Link } from '../../routes'
+import routes, { Link } from 'routes'
 
 const ActiveLink = ({ router, children, ...props }) => {
   const child = Children.only(children)

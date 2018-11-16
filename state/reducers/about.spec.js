@@ -1,8 +1,8 @@
 /* eslint-env jest */
 
 import deepFreeze from 'deep-freeze'
-import reducer from './about'
-import C from '../constants'
+import reducer from 'state/reducers/about'
+import C from 'state/constants'
 
 describe('REDUX -> REDUCER - /about -> FETCH_ABOUT...', () => {
   const state = {

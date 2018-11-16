@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
 import { shallow } from 'enzyme'
-import Title from './'
+import Title from 'components/Title'
 
 describe('COMPONENT -> Title...', () => {
   let clicker = shallow(<Title title='Hello World!' />)

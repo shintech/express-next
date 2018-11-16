@@ -1,10 +1,10 @@
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import Main from '../layouts/Main'
-import Title from '../components/Title'
-import Content from '../components/Content'
-import actions from '../redux/actions/about'
-import api from '../api/about'
+import Main from 'layouts/Main'
+import Title from 'components/Title'
+import Content from 'components/Content'
+import actions from 'state/actions/about'
+import api from 'api/about'
 
 const About = ({ about }) =>
   <Main title='about' host='shintech.ninja' favicon='/static/images/react.svg' >

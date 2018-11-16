@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Wrapper from './wrapper'
 import theme from './theme'
-import SVG from '../../static/images/nextjs.svg'
+import SVG from 'static/images/nextjs.svg'
 
 const Footer = ({ message = 'localhost' }) =>
   <Wrapper theme={theme()}>

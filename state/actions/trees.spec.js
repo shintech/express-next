@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
-import { initStore } from '../'
-import actions from './trees'
+import { initStore } from 'state'
+import actions from 'state/actions/trees'
 
 describe('REDUX -> ACTION - /trees -> increment()...', () => {
   const store = initStore({}, { isServer: true })

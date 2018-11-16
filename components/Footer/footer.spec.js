@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
 import { shallow } from 'enzyme'
-import Footer from './'
+import Footer from 'components/Footer'
 
 describe('COMPONENT -> Footer...', () => {
   let message = 'message'

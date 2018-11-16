@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
-import { initStore } from '../'
-import actions from './about'
+import { initStore } from 'state'
+import actions from 'state/actions/about'
 
 describe('REDUX -> ACTION - /about -> fetch()...', () => {
   const store = initStore({}, { isServer: true })

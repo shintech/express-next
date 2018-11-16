@@ -2,7 +2,7 @@
 
 import { mount, shallow } from 'enzyme'
 import sinon from 'sinon'
-import Clicker from './'
+import Clicker from 'components/Clicker'
 
 const fn = jest.fn()
 

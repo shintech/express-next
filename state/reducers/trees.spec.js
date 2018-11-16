@@ -1,8 +1,8 @@
 /* eslint-env jest */
 
 import deepFreeze from 'deep-freeze'
-import reducer from './trees'
-import C from '../constants'
+import reducer from 'state/reducers/trees'
+import C from 'state/constants'
 
 describe('REDUX -> REDUCER - /trees -> INCREMENT_TREES...', () => {
   const state = {

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import PropTypes from 'prop-types'
-import Nav from '../../components/Nav'
-import Footer from '../../components/Footer'
+import Nav from 'components/Nav'
+import Footer from 'components/Footer'
 import Wrapper from './wrapper'
 import theme from './theme'
 
