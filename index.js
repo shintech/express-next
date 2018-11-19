@@ -7,7 +7,7 @@ const createLogger = require('shintech-logger')
 const pkg = require('./package.json')
 
 require('dotenv').config({
-  path: path.join(__dirname, 'config', 'env', 'development.env'),
+  path: path.join(__dirname, 'config', 'env', '.env'),
   systemvars: true
 })
 

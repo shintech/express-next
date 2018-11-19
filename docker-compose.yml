@@ -7,7 +7,7 @@ services:
     volumes: 
       - ./data/log/express-next:/shintech/log
     env_file:
-      - ./config/env/production.env
+      - ./config/env/.env
     ports:
       - "8000:8000"
     restart: always

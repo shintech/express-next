@@ -32,10 +32,10 @@ const Wrapper = styled.nav`
   .active {
     background-color: ${props => props.theme.active};
     color: ${props => props.theme.activeHoverText};
+    pointer-events: none;      
     
     :hover {
       background-color: ${props => props.theme.activeHover};
-      cursor: default;
       color: ${props => props.theme.activeHoverText}
     }  
   }  

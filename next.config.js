@@ -36,7 +36,7 @@ module.exports = (phase, { defaultConfig }) => {
         ...config.plugins,
 
         new Dotenv({
-          path: path.join(__dirname, 'config', 'env', 'development.env'),
+          path: path.join(__dirname, 'config', 'env', '.env'),
           systemvars: true
         })
       ]
