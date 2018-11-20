@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Main from 'layouts/Main'
 import Title from 'components/Title'
 import Clicker from 'components/Clicker'
-import api from 'api/trees'
 import actions from 'state/actions/trees'
 import main from 'state/actions/main'
 
@@ -26,14 +25,7 @@ class Home extends React.Component {
 }
 
 Home.getInitialProps = async ({ store }) => {
-  try {
-    let json = await api.fetch()
-
-    store.dispatch(main.toggleInProp(false))
-    store.dispatch(actions.fetchValue(json.value))
-  } catch (err) {
-    console.error(err.message)
-  }
+  store.dispatch(main.toggleInProp(false))
 
   return {
     title: 'Hello World!!'

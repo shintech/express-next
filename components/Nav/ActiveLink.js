@@ -12,9 +12,11 @@ const ActiveLink = ({ router, children, ...props }) => {
     className = `${className !== null ? className : ''} ${props.activeClassName}`.trim()
   }
 
+  const onClick = (className === 'active') ? e => { e.preventDefault() } : null
+
   delete props.activeClassName
 
-  return <Link {...props}>{React.cloneElement(child, { className })}</Link>
+  return <Link {...props}>{React.cloneElement(child, { className, onClick })}</Link>
 }
 
 export default withRouter(ActiveLink)
