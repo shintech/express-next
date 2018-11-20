@@ -6,7 +6,7 @@ import Wrapper from './wrapper'
 import theme from './theme'
 import Transition from 'react-transition-group/Transition'
 
-const duration = 250
+const duration = 300
 
 const defaultStyle = {
   transition: `opacity ${duration}ms ease-in-out`,
