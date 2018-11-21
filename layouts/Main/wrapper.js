@@ -7,15 +7,15 @@ const Wrapper = styled.div`
 
   main {
     min-height: ${props => props.theme.height};
-
     grid-row: 2;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    text-align: center;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     background-color: midnightblue;
   }
 `

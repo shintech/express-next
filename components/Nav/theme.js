@@ -1,10 +1,13 @@
 export default options => ({
   background: 'purple',
-  text: '#FFF',
+  text: 'pink',
+  tagBackground: 'mediumvioletred',
+  svg: 'gold',
   active: 'teal',
   activeText: 'black',
   activeHover: 'steelblue',
   activeHoverText: 'black',
   hover: 'violet',
-  hoverText: 'black'
+  hoverText: 'black',
+  activeSVG: 'black'
 })

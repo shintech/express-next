@@ -6,13 +6,26 @@ import Clicker from 'components/Clicker'
 import actions from 'state/actions/trees'
 
 class Home extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = { loaded: false }
+  }
+
+  componentDidMount () {
+    this.setState({ loaded: true })
+  }
+
   render () {
     const { title, trees, increment, decrement } = this.props
 
     return (
       <Main title='index' host='shintech.ninja' favicon='/static/images/nodejs-icon.svg'>
-        <Title title={title} fontSize='18ch' />
-        <Clicker trees={trees} increment={increment} decrement={decrement} />
+        {(!this.state.loaded) ? <span />
+          : <div className='container'>
+            <Title title={title} fontSize='18ch' />
+            <Clicker trees={trees} increment={increment} decrement={decrement} />
+          </div>
+        }
       </Main>
     )
   }

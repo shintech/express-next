@@ -7,13 +7,26 @@ import api from 'api/about'
 import actions from 'state/actions/about'
 
 class About extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = { loaded: false }
+  }
+
+  componentDidMount () {
+    this.setState({ loaded: true })
+  }
+
   render () {
     const { about } = this.props
 
     return (
       <Main title='about' host='shintech.ninja' favicon='/static/images/react.svg' >
-        <Title title={about.title} fontSize='24ch' colors={['gold', 'green']} />
-        <Content content={about.data} />
+        {(!this.state.loaded) ? <span />
+          : <div className='container'>
+            <Title title={about.title} fontSize='24ch' colors={['gold', 'green']} />
+            <Content content={about.data} />
+          </div>
+        }
       </Main>
     )
   }

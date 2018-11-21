@@ -16,18 +16,18 @@ const Wrapper = styled.footer`
     color: ${props => props.theme.text};
     text-shadow: 0.08ch 0.08ch ${props => props.theme.textShadow};
     text-decoration: none;
+
+    span {
+      font-family: 'Rouge Script', cursive;
+      font-size: 3ch;
+      margin: 0;
+    }
   }
 
   svg {
-    margin: 0.5vh 0 0 1vh;
+    margin: 1vh 0 0 2vh;
     height: 5ch;
     width: 5ch;
-  }
-
-  .footer-message {
-    font-family: 'Rouge Script', cursive;
-    font-size: 3ch;
-    margin: 0;
   }
 `
 
