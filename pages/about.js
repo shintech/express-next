@@ -5,23 +5,19 @@ import Title from 'components/Title'
 import Content from 'components/Content'
 import api from 'api/about'
 import actions from 'state/actions/about'
+import mainState from 'state/actions/main'
 
 class About extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = { loaded: false }
-  }
-
   componentDidMount () {
-    this.setState({ loaded: true })
+    this.props.toggleInProp(true)
   }
 
   render () {
-    const { about } = this.props
+    const { about, main } = this.props
 
     return (
       <Main title='about' host='shintech.ninja' favicon='/static/images/react.svg' >
-        {(!this.state.loaded) ? <span />
+        {(!main.loaded) ? <span />
           : <div className='container'>
             <Title title={about.title} fontSize='24ch' colors={['gold', 'green']} />
             <Content content={about.data} />
@@ -33,6 +29,8 @@ class About extends React.Component {
 }
 
 About.getInitialProps = async ({ store }) => {
+  store.dispatch(mainState.toggleInProp(false))
+
   try {
     let json = await api.fetch()
 
@@ -50,6 +48,10 @@ About.propTypes = {
 
 const mapStateToProps = (state) => state
 
-const mapDispatchToProps = (dispatch) => ({ })
+const mapDispatchToProps = dispatch => ({
+  toggleInProp: bool => {
+    dispatch(mainState.toggleInProp(bool))
+  }
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(About)
