@@ -4,19 +4,13 @@ import Main from 'layouts/Main'
 import Title from 'components/Title'
 import Clicker from 'components/Clicker'
 import actions from 'state/actions/trees'
-import main from 'state/actions/main'
 
 class Home extends React.Component {
-  componentWillMount () {
-    const { toggleInProp } = this.props
-    toggleInProp(true)
-  }
-
   render () {
-    const { title, trees, increment, decrement, main } = this.props
+    const { title, trees, increment, decrement } = this.props
 
     return (
-      <Main inProp={main.inProp} title='index' host='shintech.ninja' favicon='/static/images/nodejs-icon.svg'>
+      <Main title='index' host='shintech.ninja' favicon='/static/images/nodejs-icon.svg'>
         <Title title={title} fontSize='18ch' />
         <Clicker trees={trees} increment={increment} decrement={decrement} />
       </Main>
@@ -24,13 +18,9 @@ class Home extends React.Component {
   }
 }
 
-Home.getInitialProps = async ({ store }) => {
-  store.dispatch(main.toggleInProp(false))
-
-  return {
-    title: 'Hello World!!'
-  }
-}
+Home.getInitialProps = async ({ store }) => ({
+  title: 'Hello World!!'
+})
 
 Home.propTypes = {
   title: PropTypes.string.isRequired,
@@ -47,9 +37,6 @@ const mapDispatchToProps = (dispatch) => ({
   },
   decrement: (value) => {
     dispatch(actions.decrement(value))
-  },
-  toggleInProp: payload => {
-    dispatch(main.toggleInProp(payload))
   }
 })
 

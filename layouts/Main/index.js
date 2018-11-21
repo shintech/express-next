@@ -4,19 +4,6 @@ import Nav from 'components/Nav'
 import Footer from 'components/Footer'
 import Wrapper from './wrapper'
 import theme from './theme'
-import Transition from 'react-transition-group/Transition'
-
-const duration = 300
-
-const defaultStyle = {
-  transition: `opacity ${duration}ms ease-in-out`,
-  opacity: 0
-}
-
-const transitionStyles = {
-  entering: { opacity: 0 },
-  entered: { opacity: 1 }
-}
 
 const Main = ({ children, inProp, title = 'default!', host = 'localhost', favicon = '/static/images/favicon.png' }) =>
   <Wrapper theme={theme()}>
@@ -27,13 +14,9 @@ const Main = ({ children, inProp, title = 'default!', host = 'localhost', favico
 
     <Nav />
 
-    <Transition in={inProp} timeout={duration}>
-      {(state) => (
-        <main style={{ ...defaultStyle, ...transitionStyles[state] }}>
-          { children }
-        </main>
-      )}
-    </Transition>
+    <main>
+      { children }
+    </main>
 
     <Footer message={host} />
   </Wrapper>
