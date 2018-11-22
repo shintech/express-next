@@ -4,7 +4,7 @@ services:
   express-next:
     build: .
     container_name: express-next
-    volumes: 
+    volumes:
       - ./data/log/express-next:/shintech/log
     env_file:
       - ./config/env/.env

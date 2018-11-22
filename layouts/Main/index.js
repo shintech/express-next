@@ -5,7 +5,7 @@ import Footer from 'components/Footer'
 import Wrapper from './wrapper'
 import theme from './theme'
 
-const Main = ({ children, inProp, title = 'default!', host = 'localhost', favicon = '/static/images/favicon.png' }) =>
+const Main = ({ children, title = 'default!', host = 'localhost', favicon = '/static/images/favicon.png' }) =>
   <Wrapper theme={theme()}>
     <Head>
       <title>{ title } | {host} </title>
