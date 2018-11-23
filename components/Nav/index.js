@@ -11,6 +11,9 @@ const Nav = () =>
     <Link prefetch activeClassName='active' route='about'><a>about</a></Link>
     <Link prefetch activeClassName='active' route='contact'><a>contact</a></Link>
     <SVG className='logo' />
+    <a href='javascript:void(0);' className='icon' onClick={() => { }}>
+      <i className='fa fa-bars' />
+    </a>
   </Wrapper>
 
 Nav.propTypes = {}

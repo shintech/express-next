@@ -30,6 +30,10 @@ const Wrapper = styled.footer`
     height: 5ch;
     width: 5ch;
   }
+  
+  @media (max-width: 800px) {
+    grid-column: span 3;
+  }  
 `
 
 export default Wrapper

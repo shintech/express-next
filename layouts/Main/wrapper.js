@@ -3,10 +3,10 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
   display: grid;
   grid-template-rows: [start row-1] 6ch [row-2] auto [row-3] 6ch [stop end];
-  grid-template-columns: [start column-1] 30vh [column-2] auto [end];
+  grid-template-columns: [start column-1] 30vh [column-2] auto;
 
   main {
-    min-height: ${props => props.theme.height};
+    min-height: 87.5vh;
     grid-row: 2;
     grid-column: 2;
     display: flex;
@@ -30,8 +30,15 @@ const Wrapper = styled.div`
     }
   }
 
-  @media (max-width: 900px) {
-    background-color: midnightblue;
+  @media (max-width: 800px) {
+    main {
+      grid-column: span 3;
+      min-height: 91vh;
+    }
+    
+    svg.main-icon {
+      display: none;
+    }
   }
 `
 

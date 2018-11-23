@@ -6,10 +6,13 @@ const Wrapper = styled.nav`
 
   display: flex;
   flex-direction: column;
-
+  
   overflow: hidden;
 
   background-color: ${props => props.theme.background};
+  .icon {
+    display: none;
+  }
 
   a {
     color: ${props => props.theme.text};
@@ -48,6 +51,32 @@ const Wrapper = styled.nav`
     height: 9ch;
     width: 9ch;
     margin: auto 2ch 0 auto;
+  }
+
+  @media (max-width: 800px) {
+    grid-row: 1;
+    grid-column: span 3;
+    flex-direction: row;
+    border-radius: 1ch;
+    align-items: center;
+
+    a {
+      border-radius: 0;
+      border: none;
+
+      :first-child {
+        border-radius: 1ch 0 0 1ch;
+      }
+
+      &.icon {
+        margin-left: auto;
+        display: block;
+      }
+    }
+
+    svg.logo {
+      display: none;
+    }
   }
 `
 
