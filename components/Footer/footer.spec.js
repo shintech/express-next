@@ -18,8 +18,8 @@ describe('COMPONENT -> Footer...', () => {
 
 describe('COMPONENT -> Footer - snapshot...', () => {
   it('expect to render correct properties', () => {
-  let message = 'message'
-  
-  shallowExpect(<Footer message={message} />).toMatchSnapshot()
+    let message = 'message'
+
+    shallowExpect(<Footer message={message} />).toMatchSnapshot()
   })
 })

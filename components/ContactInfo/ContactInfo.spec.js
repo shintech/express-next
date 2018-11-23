@@ -9,6 +9,6 @@ const shallowExpect = compose(expect, toJSON, shallow)
 
 describe('COMPONENT -> ContactInfo - snapshot...', () => {
   it('expect to render correct properties', () => {
-    let output = shallowExpect(<ContactInfo email='email@example.org' />).toMatchSnapshot()
+    shallowExpect(<ContactInfo email='email@example.org' />).toMatchSnapshot()
   })
-})  
+})

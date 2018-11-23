@@ -39,11 +39,11 @@ describe('COMPONENT -> Clicker -> theme test', () => {
   it('expect theme.number to equal "lightcoral" when number < 0', () => {
     expect(theme({ value: -1 }).number).toBe('lightcoral')
   })
-  
+
   it('expect theme.number to equal "deepskyblue" when number = 0', () => {
     expect(theme({ value: 0 }).number).toBe('deepskyblue')
   })
-  
+
   it('expect theme.number to equal "palegreen" when number > 0', () => {
     expect(theme({ value: 1 }).number).toBe('palegreen')
   })
