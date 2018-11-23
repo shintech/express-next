@@ -9,3 +9,4 @@
 /uploads/*
 /log/*
 /config/env/production.env
+/coverage

@@ -14,8 +14,8 @@ const Wrapper = styled.footer`
     padding: 1.25ch;
     margin-left: auto;
     margin-top: 0.5ch;
-    color: ${props => props.theme.text};
-    text-shadow: 0.08ch 0.08ch ${props => props.theme.textShadow};
+    color: orange;
+    text-shadow: '0.08ch 0.08ch red';
     text-decoration: none;
 
     span {

@@ -3,12 +3,12 @@
 import { shallow } from 'enzyme'
 import { compose } from 'redux'
 import toJSON from 'enzyme-to-json'
-import Nav from 'components/Nav'
+import ContactInfo from 'components/ContactInfo'
 
 const shallowExpect = compose(expect, toJSON, shallow)
 
-describe('COMPONENT -> Nav - snapshot...', () => {
+describe('COMPONENT -> ContactInfo - snapshot...', () => {
   it('expect to render correct properties', () => {
-    shallowExpect(<Nav />).toMatchSnapshot()
+    let output = shallowExpect(<ContactInfo email='email@example.org' />).toMatchSnapshot()
   })
-})
+})  

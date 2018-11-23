@@ -7,11 +7,11 @@ const format = ({ title, data }) => ({
 
 module.exports = {
   fetch: (req, res) => {
-    const formatted = format({
-      data: faker.company.bs(),
-      title: faker.company.bsBuzz()
-    })
-
-    res.status(200).json(formatted)
+    res.status(200).json(
+      format({
+        data: faker.company.bs(),
+        title: faker.company.bsBuzz()
+      })
+    )
   }
 }

@@ -3,6 +3,7 @@
 import { mount, shallow } from 'enzyme'
 import sinon from 'sinon'
 import Clicker from 'components/Clicker'
+import theme from './theme'
 
 const fn = jest.fn()
 
@@ -32,24 +33,18 @@ describe('COMPONENT -> Clicker...', () => {
 
     expect(clicker.find('span').text()).toEqual('0')
   })
+})
 
-  // it('expect span to have class "negative" when value < 0...', () => {
-  //   const wrapper = shallow(<Clicker trees={{ value: -1 }} increment={fn} decrement={fn} />)
-
-  //   expect(wrapper.find('span').hasClass('negative')).toBeTruthy()
-  // })
-
-  // it('expect span to have class "zero" when value === 0...', () => {
-  //   const onButtonClick = sinon.spy()
-  //   const wrapper = shallow(<Clicker trees={{ value: 0 }} increment={fn} decrement={onButtonClick} />)
-
-  //   expect(wrapper.find('span').hasClass('zero')).toBeTruthy()
-  // })
-
-  // it('expect span to have class "positive" when value > 0...', () => {
-  //   const onButtonClick = sinon.spy()
-  //   const wrapper = shallow(<Clicker trees={{ value: 1 }} increment={fn} decrement={onButtonClick} />)
-
-  //   expect(wrapper.find('span').hasClass('positive')).toBeTruthy()
-  // })
+describe('COMPONENT -> Clicker -> theme test', () => {
+  it('expect theme.number to equal "lightcoral" when number < 0', () => {
+    expect(theme({ value: -1 }).number).toBe('lightcoral')
+  })
+  
+  it('expect theme.number to equal "deepskyblue" when number = 0', () => {
+    expect(theme({ value: 0 }).number).toBe('deepskyblue')
+  })
+  
+  it('expect theme.number to equal "palegreen" when number > 0', () => {
+    expect(theme({ value: 1 }).number).toBe('palegreen')
+  })
 })
