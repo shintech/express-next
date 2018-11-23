@@ -1,63 +1,54 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.nav`
-  grid-row: 1;
+  grid-row: span 3;
+  grid-column: 1;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+
   overflow: hidden;
 
   background-color: ${props => props.theme.background};
-  border-radius: 1ch;
-  
+
   a {
     color: ${props => props.theme.text};
     background-color: ${props => props.theme.tagBackground};
-    line-height: 4.5ch;
     text-align: center;
     display: flex;
     align-items: center;
-    
-    padding: 1ch 2ch 1ch 2ch;
+
+    padding: 2ch;
     text-decoration: none;
-    font-size: 2ch;
+    font-size: 2.5ch;
+
+    border-color: black;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-radius: 1ch 0 0 1ch;
+
+    &.active {
+      background-color: ${props => props.theme.active};
+      color: ${props => props.theme.activeText};
+
+      &:hover{
+        background-color: ${props => props.theme.activeHover};
+        color: ${props => props.theme.activeHoverText};
+        cursor: not-allowed;
+      }
+    }
 
     :hover {
       background-color: ${props => props.theme.hover};
       color: ${props => props.theme.hoverText};
-      
-      svg {
-        fill: black;
-      }         
     }
-    
-    &.icon {
-     margin-left: auto;
-     height: 100%
-    }
-    
-    svg {
-      height: 6.5ch;
-      width: 6.5ch;
-      fill: ${props => props.theme.svg};
-    }    
   }
-  
-  .active {
-    background-color: ${props => props.theme.active};
-    color: ${props => props.theme.activeHoverText};
-  
-    &:hover{
-      background-color: ${props => props.theme.activeHover};
-      color: ${props => props.theme.activeHoverText};
-      cursor: not-allowed;
-    }  
-    
-    & svg {
-      fill: ${props => props.theme.activeSVG};
-    }
-  }  
+
+  svg.logo {
+    height: 9ch;
+    width: 9ch;
+    margin: auto 2ch 0 auto;
+  }
 `
 
 export default Wrapper

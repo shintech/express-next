@@ -1,5 +1,5 @@
 export default options => ({
   background: 'magenta',
-  text: 'black',
+  text: 'orange',
   textShadow: '0.08ch 0.08ch red'
 })

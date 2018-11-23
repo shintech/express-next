@@ -1,7 +1,9 @@
+import React from 'react'
 import Head from 'next/head'
 import PropTypes from 'prop-types'
 import Nav from 'components/Nav'
 import Footer from 'components/Footer'
+import SVG from 'static/images/nextjs.svg'
 import Wrapper from './wrapper'
 import theme from './theme'
 
@@ -13,6 +15,8 @@ const Main = ({ children, title = 'default!', host = 'localhost', favicon = '/st
     </Head>
 
     <Nav />
+
+    <SVG className='main-icon'/>
 
     <main>
       { children }

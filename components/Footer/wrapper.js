@@ -4,8 +4,9 @@ const Wrapper = styled.footer`
   display: flex;
   min-height: 3vh;
   grid-row: 3;
+  grid-column: 2;
   border-radius: 1ch;
-  background-color: ${props => props.theme.background};
+  background-color: transparent;
   align-items: center;
   justify-content: center;
 
