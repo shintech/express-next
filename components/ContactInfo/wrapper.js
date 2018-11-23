@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  email a {
+  a {
     font-size 4ch;
     color: lightgreen;
     text-decoration: none;

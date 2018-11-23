@@ -7,24 +7,23 @@ import ContactInfo from 'components/ContactInfo'
 class Home extends React.Component {
   static async getInitialProps ({ store }) {
     return {
-      title: 'Contact!!'
+      title: 'Contact!!',
+      email: process.env['EMAIL']
     }
   }
 
   static propTypes = {
     title: PropTypes.string.isRequired,
-    trees: PropTypes.object.isRequired,
-    increment: PropTypes.func.isRequired,
-    decrement: PropTypes.func.isRequired
+    email: PropTypes.string.isRequired
   }
 
   render () {
-    const { title, trees, increment, decrement } = this.props
+    const { title, email } = this.props
 
     return (
       <Main title='contact' host='shintech.ninja' favicon='/static/images/nodejs-icon.svg'>
         <Title title={title} fontSize='22ch' colors={['steelblue', 'lightgreen']} />
-        <ContactInfo />
+        <ContactInfo email={email} />
       </Main>
     )
   }

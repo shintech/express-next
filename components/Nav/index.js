@@ -10,7 +10,7 @@ const Nav = () =>
     <Link prefetch activeClassName='active' route='index'><a>home</a></Link>
     <Link prefetch activeClassName='active' route='about'><a>about</a></Link>
     <Link prefetch activeClassName='active' route='contact'><a>contact</a></Link>
-    <SVG className='logo' />    
+    <SVG className='logo' />
   </Wrapper>
 
 Nav.propTypes = {}
