@@ -4,7 +4,6 @@ import Main from 'layouts/Main'
 import Title from 'components/Title'
 import Clicker from 'components/Clicker'
 import actions from 'state/actions/trees'
-import mainState from 'state/actions/main'
 
 class Home extends React.Component {
   static async getInitialProps ({ store }) {
@@ -24,7 +23,7 @@ class Home extends React.Component {
     const { title, trees, increment, decrement } = this.props
 
     return (
-      <Main title='index' host='shintech.ninja' favicon='/static/images/nodejs-icon.svg'>
+      <Main title='home' host='shintech.ninja' favicon='/static/images/nodejs-icon.svg'>
         <Title title={title} fontSize='18ch' />
         <Clicker trees={trees} increment={increment} decrement={decrement} />
       </Main>
@@ -41,9 +40,6 @@ export default connect(
     },
     decrement: (value) => {
       dispatch(actions.decrement(value))
-    },
-    toggleInProp: bool => {
-      dispatch(mainState.toggleInProp(bool))
     }
   })
 )(Home)

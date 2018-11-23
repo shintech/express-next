@@ -8,8 +8,9 @@ const Wrapper = styled.nav`
   flex-direction: column;
   
   overflow: hidden;
-
+  
   background-color: ${props => props.theme.background};
+  
   .icon {
     display: none;
   }
@@ -68,6 +69,7 @@ const Wrapper = styled.nav`
         border-radius: 1ch 0 0 1ch;
       }
 
+      &:not(:first-child) {display: none;}
       &.icon {
         margin-left: auto;
         display: block;
@@ -76,6 +78,32 @@ const Wrapper = styled.nav`
 
     svg.logo {
       display: none;
+    }
+    
+    &.responsive {
+      flex-direction: column;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }      
+      
+      a {
+        display: block;
+        
+        margin-left: 3.5ch;
+        
+        :last-child {
+          border-radius: 0 1ch 1ch 0;
+        }
+        
+        :not(:last-child) {
+          width: 100%;
+          text-align: left;
+        }
+      }
     }
   }
 `

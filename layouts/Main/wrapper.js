@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-rows: [start row-1] 6ch [row-2] auto [row-3] 6ch [stop end];
+  grid-template-rows: [start row-1] auto [row-2] auto [row-3] 6ch [stop end];
   grid-template-columns: [start column-1] 30vh [column-2] auto;
 
   main {
